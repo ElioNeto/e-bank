@@ -4,9 +4,9 @@ import AppFooter from "./modules/views/AppFooter";
 import ProductHero from "./modules/views/ProductHero";
 import ProductValues from "./modules/views/ProductValues";
 import AppAppBar from "./modules/views/AppAppBar";
-import withRoot from "./modules/withRoot";
+import withRoot from "../../theme/withRoot";
 
-import "./styles.css";
+import "../../styles/styles.css";
 
 function Index() {
   return (
