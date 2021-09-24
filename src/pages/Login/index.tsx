@@ -11,6 +11,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { Copyright2 } from "../../components/Copyright";
 import withRoot from "../../theme/withRoot";
+import { LinkEBank } from "../../components/TypographyAndLinks";
 
 function SignIn() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -18,76 +19,89 @@ function SignIn() {
     const data = new FormData(event.currentTarget);
     // eslint-disable-next-line no-console
     console.log({
-      email: data.get("email"),
+      cpf: data.get("cpf"),
       password: data.get("password"),
     });
   };
 
   return (
-    <Container component="main" maxWidth="xs">
-      <Box
-        sx={{
-          marginTop: 8,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-          <LockOutlinedIcon />
-        </Avatar>
-        <Typography component="h1" variant="h5">
-          Acesse sua conta
-        </Typography>
-        <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-          <TextField
-            margin="normal"
-            required
-            fullWidth
-            id="email"
-            label="Email Address"
-            name="email"
-            autoComplete="email"
-            autoFocus
-          />
-          <TextField
-            margin="normal"
-            required
-            fullWidth
-            name="password"
-            label="Password"
-            type="password"
-            id="password"
-            autoComplete="current-password"
-          />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
-          />
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            sx={{ mt: 3, mb: 2 }}
+    <div>
+      <Container component="main" maxWidth="xs">
+        <Box
+          sx={{
+            marginTop: 8,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <LinkEBank />
+          <Avatar sx={{ m: 1, bgcolor: "secondary.dark" }}>
+            <LockOutlinedIcon />
+          </Avatar>
+          <Typography component="h1" variant="h5" color="secondary.main">
+            Acesse sua conta
+          </Typography>
+          <Box
+            component="form"
+            onSubmit={handleSubmit}
+            noValidate
+            sx={{ mt: 1, color: "primary.main" }}
           >
-            Sign In
-          </Button>
-          <Grid container>
-            <Grid item xs>
-              <Link href="#" variant="body2">
-                Forgot password?
-              </Link>
-            </Grid>
-            <Grid item>
-              <Link href="#" variant="body2">
-                {"Don't have an account? Sign Up"}
-              </Link>
-            </Grid>
-          </Grid>
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="cpf"
+              label="CPF"
+              name="cpf"
+              autoComplete="cpf"
+              autoFocus
+              color="secondary"
+              className="ebank-form-field-label ebank-form-field-border-white"
+            />
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              name="password"
+              label="Password"
+              type="password"
+              id="password"
+              autoComplete="current-password"
+              color="secondary"
+              className="ebank-form-field-label ebank-form-field-border-white"
+            />
+            <FormControlLabel
+              control={
+                <Checkbox value="remember" className="ebank-form-field-label" />
+              }
+              label="Lembrar CPF"
+            />
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              className="ebank-button-login-with-hover"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Acessar
+            </Button>
+            <Button
+              type="button"
+              fullWidth
+              variant="contained"
+              className="ebank-button-back-with-hover"
+              sx={{ mb: 2 }}
+              href="/"
+            >
+              Voltar
+            </Button>
+          </Box>
         </Box>
-      </Box>
-      <Copyright2 sx={{ mt: 8, mb: 4 }} />
-    </Container>
+        <Copyright2 sx={{ mt: 8, mb: 4, color: "primary.main" }} />
+      </Container>
+    </div>
   );
 }
 

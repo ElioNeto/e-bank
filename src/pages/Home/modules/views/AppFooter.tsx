@@ -1,6 +1,4 @@
-import * as React from "react";
 import Grid from "@mui/material/Grid";
-import Link from "@mui/material/Link";
 import Container from "@mui/material/Container";
 import Typography from "../components/Typography";
 
@@ -10,7 +8,7 @@ export default function AppFooter() {
   return (
     <Typography
       component="footer"
-      sx={{ display: "flex", bgcolor: "secondary.light" }}
+      sx={{ display: "flex", bgcolor: "secondary.dark" }}
     >
       <Container sx={{ my: 8, display: "flex" }}>
         <Grid item>

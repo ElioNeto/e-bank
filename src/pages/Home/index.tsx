@@ -6,8 +6,6 @@ import ProductValues from "./modules/views/ProductValues";
 import AppAppBar from "./modules/views/AppAppBar";
 import withRoot from "../../theme/withRoot";
 
-import "../../styles/styles.css";
-
 function Index() {
   return (
     <React.Fragment>

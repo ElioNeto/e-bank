@@ -4,13 +4,13 @@ import Typography from "@mui/material/Typography";
 
 export function Copyright() {
   return (
-    <React.Fragment>
+    <Typography color="primary.main">
       {"© "}
       <Link color="inherit" href="https://github.com/ElioNeto/e-bank">
         E-bank
       </Link>{" "}
       {"2021"}
-    </React.Fragment>
+    </Typography>
   );
 }
 
