@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+/* 
+    pallete
+    c1: #000
+    c2: #6FEE5D
+    c3: #F6F6F6
+    c4: #fff
+    c5: #0064CE
+*/
+
+.ebank-header-name {
+  font-family: "Major Mono Display", monospace !important;
+}
+.ebank-header-background {
+  background: #000 !important;
+}
+.ebank-white-color-text {
+  color: #f6f6f6 !important;
+}
+.ebank-button-border-radius-s1 {
+  border-radius: 1rem !important;
+}
+.ebank-bg-primary {
+  background-color: black;
+  padding: 0 !important;
+}
+.ebank-margin-top-mui-8 {
+  margin-top: 64px;
+}
+.ebank-form-field-border-white div fieldset {
+  border-color: #f6f6f6 !important;
+}
+.ebank-form-field-label {
+  color: #f6f6f6 !important;
+}
+.ebank-form-field-label label {
+  color: #f6f6f6;
+}
+.ebank-button-login-with-hover {
+  background-color: #6fee5d !important;
+}
+.ebank-button-back-with-hover {
+  background-color: #f6f6f7 !important;
+}
+.ebank-button-login-with-hover:hover,
+.ebank-button-back-with-hover:hover {
+  opacity: 0.6;
+  transition: 0.5s;
+}

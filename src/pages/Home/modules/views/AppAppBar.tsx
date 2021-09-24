@@ -1,5 +1,6 @@
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
+import { LinkEBank } from "../../../../components/TypographyAndLinks";
 import AppBar from "../components/AppBar";
 import Toolbar from "../components/Toolbar";
 
@@ -12,19 +13,10 @@ const rightLink = {
 function AppAppBar() {
   return (
     <div>
-      <AppBar position="fixed">
+      <AppBar position="fixed" className="ebank-header-background ">
         <Toolbar sx={{ justifyContent: "space-between" }}>
           <Box sx={{ flex: 1 }} />
-          <Link
-            variant="h6"
-            underline="none"
-            color="#6FEE5D"
-            href="/"
-            sx={{ fontSize: 36 }}
-            className="ebank-header-name"
-          >
-            {"E-Bank"}
-          </Link>
+          <LinkEBank />
           <Box sx={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
             <Link
               color="inherit"
